@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Typewriter from "../components/Typewriter";
 import SkillCloud from "../components/SkillCloud";
+import Globe3D from "../components/Globe3D";
 import { profile, experience, skillCategories, skills } from "../data/profile";
 import azraPhoto from "../../azra profile.png";
 
@@ -168,6 +169,7 @@ function HomePage() {
   return (
     <div className="page">
       <header className="hero" id="home">
+        <Globe3D variant="hero" />
         <nav className="navbar">
           <a
             className="brand"
@@ -273,6 +275,8 @@ function HomePage() {
           </div>
         </div>
       </header>
+
+      <Globe3D variant="page" />
 
       <main>
         <section className="section section-about" id="about">
