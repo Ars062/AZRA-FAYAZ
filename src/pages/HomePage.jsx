@@ -449,6 +449,14 @@ function HomePage() {
               Strategy isn&rsquo;t just a plan — it&rsquo;s a language between brand and audience.
             </p>
 
+            <h3 className="work-subheading">Strategy tips</h3>
+            <ol className="tips-list">
+              <li>Your audience follows clarity, not complexity.</li>
+              <li>Trends are tools, not the blueprint.</li>
+              <li>Make your messaging unmistakable.</li>
+              <li>Good strategy feels simple, but never shallow.</li>
+            </ol>
+
             <h3 className="work-subheading">Education</h3>
             <ul className="work-list work-list-plain">
               <li>{profile.education}</li>
