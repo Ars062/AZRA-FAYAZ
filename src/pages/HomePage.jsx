@@ -2,6 +2,7 @@ import { useState } from "react";
 import Typewriter from "../components/Typewriter";
 import SkillCloud from "../components/SkillCloud";
 import { profile, experience, skillCategories, skills } from "../data/profile";
+import azraPhoto from "../../azra profile.png";
 
 function scrollTo(id) {
   const el = document.getElementById(id);
@@ -110,6 +111,9 @@ const countryCodes = [
   { code: "+998", country: "Uzbekistan" },
 ];
 
+const WHATSAPP_NUMBER = "";
+const CONTACT_EMAIL = profile.email || "";
+
 function HomePage() {
   const [sent, setSent] = useState(null);
   const [countryCode, setCountryCode] = useState("+91");
@@ -122,6 +126,43 @@ function HomePage() {
     }
     setSent("ok");
     event.currentTarget.reset();
+  };
+
+  const handleWhatsApp = () => {
+    const name = document.getElementById("name")?.value.trim();
+    const email = document.getElementById("email")?.value.trim();
+    const phone = document.getElementById("phone")?.value.trim();
+    const message = document.getElementById("message")?.value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in your name, email and message before sending a WhatsApp message.");
+      return;
+    }
+
+    if (!WHATSAPP_NUMBER) {
+      alert("WhatsApp number is being added soon. Please use the Email button for now.");
+      return;
+    }
+
+    const fullMessage = `Hi, I am ${name}. Email: ${email}. Phone: ${phone ? `${countryCode} ${phone}` : "—"}. Message: ${message}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const handleEmail = () => {
+    const name = document.getElementById("name")?.value.trim();
+    const email = document.getElementById("email")?.value.trim();
+    const phone = document.getElementById("phone")?.value.trim();
+    const message = document.getElementById("message")?.value.trim();
+
+    if (!CONTACT_EMAIL) {
+      alert("Email is being added soon. Please reach out on LinkedIn in the meantime.");
+      return;
+    }
+
+    const subject = `Message from ${name || "Portfolio visitor"}`;
+    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone ? `${countryCode} ${phone}` : "—"}\n\n${message}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -190,8 +231,8 @@ function HomePage() {
 
         <div className="hero-content">
           <div className="hero-left">
-            <div className="hero-badge" aria-hidden="true">
-              AF
+            <div className="hero-photo">
+              <img src={azraPhoto} alt="Azra Fayaz" />
             </div>
           </div>
           <div className="hero-right">
@@ -459,9 +500,14 @@ function HomePage() {
               <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows="5" required />
 
-              <button type="submit">
-                <ion-icon name="paper-plane-outline"></ion-icon> Send message
-              </button>
+              <div className="button-row">
+                <button type="button" onClick={handleWhatsApp}>
+                  <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+                </button>
+                <button type="button" onClick={handleEmail}>
+                  <ion-icon name="mail-outline"></ion-icon> Email
+                </button>
+              </div>
 
               {sent === "contact" && (
                 <p className="submit-message" data-status="info">
@@ -476,27 +522,6 @@ function HomePage() {
               )}
             </form>
 
-            <div className="contact-chips">
-              {profile.email ? (
-                <a className="contact-chip" href={`mailto:${profile.email}`}>
-                  <ion-icon name="mail-outline"></ion-icon> {profile.email}
-                </a>
-              ) : (
-                <span className="contact-chip is-pending">
-                  <ion-icon name="mail-outline"></ion-icon> Email — coming soon
-                </span>
-              )}
-              {profile.phone ? (
-                <a className="contact-chip" href={`tel:${profile.phone}`}>
-                  <ion-icon name="call-outline"></ion-icon> {profile.phone}
-                </a>
-              ) : (
-                <span className="contact-chip is-pending">
-                  <ion-icon name="call-outline"></ion-icon> Phone — coming soon
-                </span>
-              )}
-            </div>
-
             <div className="social-row">
               <a
                 href="https://www.linkedin.com/in/azra-fayaz/"
@@ -510,12 +535,6 @@ function HomePage() {
           </div>
         </section>
       </main>
-
-      <footer className="site-footer">
-        <p>
-          © {new Date().getFullYear()} {profile.name} · Built with React &amp; Vite
-        </p>
-      </footer>
     </div>
   );
 }
