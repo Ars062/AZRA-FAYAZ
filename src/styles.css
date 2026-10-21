@@ -312,26 +312,55 @@ h2::after {
   line-height: 1.4;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: center;
+.about-photo-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  background: #fdf6f0;
 }
 
-.about-photo {
-  margin: 0;
-  display: flex;
-  justify-content: center;
+.about-photo-blur {
+  position: absolute;
+  inset: -60px;
+  background-repeat: no-repeat;
+  background-position: center 22%;
+  background-size: cover;
+  filter: blur(38px) saturate(1.15);
+  transform: scale(1.08);
 }
 
-.about-photo img {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 18px 34px rgba(166, 38, 90, 0.22));
+.about-photo-sharp {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: contain;
+}
+
+.about-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.94) 36%,
+    rgba(255, 255, 255, 0.75) 56%,
+    rgba(255, 255, 255, 0.32) 76%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+.about-photo-content {
+  position: relative;
+  z-index: 1;
+  max-width: 60%;
+}
+
+.about-photo-content .approach-card,
+.about-photo-content .quote-card,
+.about-photo-content .fact-row {
+  max-width: 100%;
 }
 
 .approach-card {
@@ -415,12 +444,31 @@ h2::after {
 }
 
 @media (max-width: 720px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+  .about-photo-card {
+    min-height: 0;
   }
 
-  .about-photo img {
-    max-width: 200px;
+  .about-photo-sharp {
+    background-position: right -1.5rem bottom -0.5rem;
+    background-size: auto 58%;
+  }
+
+  .about-photo-blur {
+    background-position: center 30%;
+  }
+
+  .about-photo-content {
+    max-width: 100%;
+  }
+
+  .about-photo-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.93) 55%,
+      rgba(255, 255, 255, 0.6) 80%,
+      rgba(255, 255, 255, 0.12) 100%
+    );
   }
 }
 

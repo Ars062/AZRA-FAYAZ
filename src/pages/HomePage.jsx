@@ -280,57 +280,63 @@ function HomePage() {
 
       <main>
         <section className="section section-about" id="about">
-          <div className="section-inner">
-            <h2>Who I am</h2>
-            <div className="about-grid">
+          <div className="section-inner about-photo-card">
+            <div
+              className="about-photo-blur"
+              style={{ backgroundImage: `url(${azraJps})` }}
+              aria-hidden="true"
+            />
+            <div
+              className="about-photo-sharp"
+              style={{ backgroundImage: `url(${azraJps})` }}
+              aria-hidden="true"
+            />
+            <div className="about-photo-scrim" aria-hidden="true" />
+            <div className="about-photo-content">
+              <h2>Who I am</h2>
               <div className="prose">
                 <p className="lead">
                   A Community &amp; Content Strategist who turns performance data and human behaviour
                   into content and community moments that make a brand feel like someone, not something.
                 </p>
                 <p>
-                  My approach is simple: understand the audience, create with intent, and deliver
-                  content that moves people — emotionally and analytically. Across social, email,
-                  influencer and on-ground work, I plan it, make it, ship it, then read the numbers
-                  to keep what wins.
+                  Across social, email, influencer and on-ground work, I plan it, make it, ship it,
+                  then read the numbers to keep what wins.
                 </p>
               </div>
-              <figure className="about-photo">
-                <img src={azraJps} alt="Azra Fayaz" />
-              </figure>
+
+              <div className="approach-card">
+                <span className="approach-tag">My approach is simple</span>
+                <p>
+                  Understand the audience, create with intent, and deliver content that moves people —
+                  emotionally and analytically.
+                </p>
+              </div>
+
+              <blockquote className="quote-card">
+                <p>&ldquo;Her strategies helped us shift from posting randomly to posting with purpose.&rdquo;</p>
+                <cite>Bashar Karoubi — Founder, Bambuyu</cite>
+              </blockquote>
+
+              <ul className="fact-row">
+                <li>
+                  <span className="fact-value">50+</span>
+                  <span className="fact-label">campaigns strategised · AED 100k+ revenue</span>
+                </li>
+                <li>
+                  <span className="fact-value">45+</span>
+                  <span className="fact-label">brand activations handled</span>
+                </li>
+                <li>
+                  <span className="fact-value">1300+</span>
+                  <span className="fact-label">leads generated</span>
+                </li>
+                <li>
+                  <span className="fact-value">40+</span>
+                  <span className="fact-label">creators worked with</span>
+                </li>
+              </ul>
             </div>
-
-            <div className="approach-card">
-              <span className="approach-tag">My approach is simple</span>
-              <p>
-                Understand the audience, create with intent, and deliver content that moves people —
-                emotionally and analytically.
-              </p>
-            </div>
-
-            <blockquote className="quote-card">
-              <p>&ldquo;Her strategies helped us shift from posting randomly to posting with purpose.&rdquo;</p>
-              <cite>Bashar Karoubi — Founder, Bambuyu</cite>
-            </blockquote>
-
-            <ul className="fact-row">
-              <li>
-                <span className="fact-value">50+</span>
-                <span className="fact-label">campaigns strategised · AED 100k+ revenue</span>
-              </li>
-              <li>
-                <span className="fact-value">45+</span>
-                <span className="fact-label">brand activations handled</span>
-              </li>
-              <li>
-                <span className="fact-value">1300+</span>
-                <span className="fact-label">leads generated</span>
-              </li>
-              <li>
-                <span className="fact-value">40+</span>
-                <span className="fact-label">creators worked with</span>
-              </li>
-            </ul>
           </div>
         </section>
 
