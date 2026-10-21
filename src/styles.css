@@ -225,7 +225,7 @@ a {
 
 /* ---------- Sections ---------- */
 main {
-  max-width: 940px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: clamp(1rem, 2.5vw, 1.8rem) clamp(1.1rem, 4vw, 2rem) 1.6rem;
 }

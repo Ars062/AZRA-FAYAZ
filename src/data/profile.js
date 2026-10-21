@@ -61,14 +61,11 @@ export const experience = [
       "Owning brand assets, creative production and community growth — from UGC and AI-assisted renders to collaborations, e-commerce and retention.",
     responsibilities: [
       { title: "Brand Assets & Content", desc: "Own the creative asset library — UGC, AI renders, campaigns and marketing assets." },
-      { title: "AI & Creative Production", desc: "Use Claude and Higgsfield to develop and optimise creative renders and assets." },
-      { title: "Creative & Designer Management", desc: "Brief and manage internal and external designers to brand guidelines and deadlines." },
+      { title: "AI & Creative Production", desc: "Use Claude and Higgsfield to develop renders and brief internal and external designers to brand guidelines." },
       { title: "Cross-Functional Execution", desc: "Coordinate with Operations, E-commerce and partners like Noon Minutes and Talabat." },
-      { title: "Collaborations & Co-Marketing", desc: "Own brand collaboration and co-marketing partnerships end-to-end." },
+      { title: "UGC, Influencer & Co-Marketing", desc: "Execute paid and barter creator collaborations and own brand co-marketing partnerships end-to-end." },
       { title: "Amazon & E-commerce", desc: "Led the Amazon storefront and A+ Content redesign — briefing to final QA." },
-      { title: "UGC & Influencer Marketing", desc: "Execute paid and barter influencer and UGC collaborations end-to-end." },
-      { title: "Brand Activations", desc: "Managed 15+ activations across UAE, coordinating vendors and on-ground execution." },
-      { title: "Email & CRM", desc: "Own Klaviyo retention marketing end-to-end, delivering 40+ campaigns." }
+      { title: "Brand Activations & CRM", desc: "Managed 15+ activations across UAE and own Klaviyo retention marketing, delivering 40+ campaigns." }
     ]
   },
   {
@@ -83,8 +80,7 @@ export const experience = [
       "Drove offline brand growth through exhibitions, barter partnerships and a new B2B channel — while growing the brand's LinkedIn presence.",
     responsibilities: [
       { title: "Exhibitions & Events", desc: "Ran national and international exhibitions — 300+ leads at ANUGA Select India 2025." },
-      { title: "B2B Partnerships & Revenue", desc: "Built a new B2B channel by converting cooking academies into bulk-sales partners." },
-      { title: "Barter & Sponsorship", desc: "Eliminated sponsorship costs through barter deals with academies and competitions." },
+      { title: "B2B & Barter Partnerships", desc: "Built a new B2B channel by converting cooking academies into bulk-sales partners, eliminating sponsorship costs through barter deals." },
       { title: "Social Media & Content Strategy", desc: "Grew LinkedIn and Instagram organically — +74.9% page views, +56.1% visitors." }
     ],
     metrics: [
@@ -105,8 +101,7 @@ export const experience = [
     summary:
       "Ran email, push and WhatsApp campaigns end-to-end and coordinated webinars from planning to live execution.",
     responsibilities: [
-      { title: "Email & Push Campaigns", desc: "Ran audience-segmented email and push campaigns on CleverTap, Mailchimp and Brevo." },
-      { title: "WhatsApp Marketing", desc: "Led WhatsApp campaigns, achieving a 48% open rate and strong conversion." },
+      { title: "Email, Push & WhatsApp Campaigns", desc: "Ran audience-segmented email, push and WhatsApp campaigns — 48% open rate on WhatsApp." },
       { title: "Webinar Coordination", desc: "Coordinated webinars end-to-end, from planning to live execution." }
     ]
   }
