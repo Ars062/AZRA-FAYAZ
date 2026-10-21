@@ -767,6 +767,36 @@ h2::after {
   box-shadow: 0 0 0 3px rgba(166, 38, 90, 0.15);
 }
 
+.phone-field {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) 1fr;
+  gap: 0.5rem;
+}
+
+.contact-form select.country-select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font: inherit;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form select.country-select:focus {
+  outline: none;
+  border-color: var(--berry);
+  box-shadow: 0 0 0 3px rgba(166, 38, 90, 0.15);
+}
+
+@media (max-width: 720px) {
+  .phone-field {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-form button {
   margin-top: 0.7rem;
   justify-self: start;
