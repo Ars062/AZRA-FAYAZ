@@ -524,7 +524,7 @@ function HomePage() {
 
             <div className="social-row">
               <a
-                href="https://www.linkedin.com/in/azra-fayaz/"
+                href="https://www.linkedin.com/in/azra-fayaz-4307bb378/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
