@@ -4,6 +4,7 @@ import SkillCloud from "../components/SkillCloud";
 import Globe3D from "../components/Globe3D";
 import { profile, experience, skillCategories, skills } from "../data/profile";
 import azraPhoto from "../../azra profile.png";
+import azraJps from "../../azra-jps.jpeg";
 
 function scrollTo(id) {
   const el = document.getElementById(id);
@@ -112,7 +113,7 @@ const countryCodes = [
   { code: "+998", country: "Uzbekistan" },
 ];
 
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "971524328500";
 const CONTACT_EMAIL = profile.email || "";
 
 function HomePage() {
@@ -248,19 +249,18 @@ function HomePage() {
               <span className="title-line">
                 <Typewriter
                   words={[
-                    "Marketing Executive",
-                    "Social Media Manager",
-                    "Brand & Content Strategist",
-                    "Influencer Marketing",
-                    "Events & Partnerships"
+                    "Social Media Strategist",
+                    "Community & Brand",
+                    "Content & Influencer Marketing",
+                    "AI-Assisted Creative"
                   ]}
                 />
               </span>
             </h1>
-            <p className="hero-headline">{profile.headline}</p>
+            <p className="hero-headline">Performance-Focused. Audience-Driven. Story-Led.</p>
             <p>
-              Based in {profile.location}. Currently Marketing Executive at {profile.company}, building
-              brands across social, content, email and on-ground activations.
+              A Community &amp; Content Strategist turning performance data and human behaviour
+              into content and community moments that make a brand feel like someone, not something.
             </p>
             <a
               className="primary-btn"
@@ -281,57 +281,54 @@ function HomePage() {
       <main>
         <section className="section section-about" id="about">
           <div className="section-inner">
-            <h2>Who am I?</h2>
-            <div className="prose">
-              <p className="lead">
-                A marketer who builds brands across screens and streets — social feeds, inboxes,
-                creator partnerships and real-world activations.
-              </p>
+            <h2>Who I am</h2>
+            <div className="about-grid">
+              <div className="prose">
+                <p className="lead">
+                  A Community &amp; Content Strategist who turns performance data and human behaviour
+                  into content and community moments that make a brand feel like someone, not something.
+                </p>
+                <p>
+                  My approach is simple: understand the audience, create with intent, and deliver
+                  content that moves people — emotionally and analytically. Across social, email,
+                  influencer and on-ground work, I plan it, make it, ship it, then read the numbers
+                  to keep what wins.
+                </p>
+              </div>
+              <figure className="about-photo">
+                <img src={azraJps} alt="Azra Fayaz" />
+              </figure>
+            </div>
+
+            <div className="approach-card">
+              <span className="approach-tag">My approach is simple</span>
               <p>
-                I&rsquo;m {profile.name}, a Marketing Executive at {profile.company}, working across
-                social media management, content creation and design, email marketing, influencer
-                marketing, brand partnerships, on-ground events and content strategy. My work sits
-                where brand positioning meets day-to-day execution — planning the calendar, making
-                the creatives, running the campaigns and reading the numbers afterwards.
-              </p>
-              <p>
-                Before Bambuyu I spent a year and a half as Brand Executive at Gramiyaa, driving
-                offline brand growth with four on-ground events every month, strategic barter
-                collaborations with 10+ cooking academies, universities and event partners, and a new
-                B2B sales channel built by onboarding those academies as customers. Over six months
-                that work grew the brand&rsquo;s LinkedIn presence by 40% in followers, 147% in
-                impressions and 93.8% in reactions — through content strategy, storytelling and
-                audience-first communication.
-              </p>
-              <p>
-                Alongside brand work I have always stayed close to people and community — as President
-                of SPIC MACAY&rsquo;s Ram Lal Anand College chapter, Vice President of Hirav (The
-                Green Society), Student Coordinator of the Women Welfare Advisory Committee, a
-                volunteer with the National Service Scheme and Content Writer with AWAAZ, the English
-                Debating Society. It is where I learned to organise, persuade and lead.
-              </p>
-              <p>
-                I studied at {profile.education} and the University of Delhi, and I work across sales
-                and marketing, FMCG, event management, content writing and social media management.
-                Open to relocation and always up for a brand that wants to grow the interesting way.
+                Understand the audience, create with intent, and deliver content that moves people —
+                emotionally and analytically.
               </p>
             </div>
+
+            <blockquote className="quote-card">
+              <p>&ldquo;Her strategies helped us shift from posting randomly to posting with purpose.&rdquo;</p>
+              <cite>Bashar Karoubi — Founder, Bambuyu</cite>
+            </blockquote>
+
             <ul className="fact-row">
               <li>
-                <span className="fact-value">9</span>
-                <span className="fact-label">roles across brand, campus &amp; community</span>
+                <span className="fact-value">50+</span>
+                <span className="fact-label">campaigns strategised · AED 100k+ revenue</span>
               </li>
               <li>
-                <span className="fact-value">10+</span>
-                <span className="fact-label">barter partnerships led</span>
+                <span className="fact-value">45+</span>
+                <span className="fact-label">brand activations handled</span>
               </li>
               <li>
-                <span className="fact-value">48</span>
-                <span className="fact-label">on-ground events in a year</span>
+                <span className="fact-value">1300+</span>
+                <span className="fact-label">leads generated</span>
               </li>
               <li>
-                <span className="fact-value">147%</span>
-                <span className="fact-label">LinkedIn impressions growth</span>
+                <span className="fact-value">40+</span>
+                <span className="fact-label">creators worked with</span>
               </li>
             </ul>
           </div>
@@ -398,72 +395,58 @@ function HomePage() {
 
         <section className="section section-work" id="work">
           <div className="section-inner">
-            <h2>Selected Work</h2>
+            <h2>What I do</h2>
 
-            <div className="work-feature">
-              <div className="work-feature-tag">Gramiyaa · Brand growth</div>
-              <h3>Growing an offline-first oil brand into a connected community</h3>
-              <p>
-                A year and a half of compounding brand work: monthly on-ground events for consumer
-                education around wood cold-pressed oils, a barter network with cooking academies,
-                universities and event partners, and a B2B channel that turned those partners into
-                repeat customers.
-              </p>
-              <div className="work-metrics">
-                <div className="work-metric">
-                  <span className="work-metric-value">4 / mo</span>
-                  <span className="work-metric-label">on-ground events executed</span>
-                </div>
-                <div className="work-metric">
-                  <span className="work-metric-value">10+</span>
-                  <span className="work-metric-label">barter partners onboarded</span>
-                </div>
-                <div className="work-metric">
-                  <span className="work-metric-value">40%</span>
-                  <span className="work-metric-label">follower growth</span>
-                </div>
-                <div className="work-metric">
-                  <span className="work-metric-value">93.8%</span>
-                  <span className="work-metric-label">rise in reactions</span>
-                </div>
-              </div>
-              <ul className="work-tags">
-                <li>Event Management</li>
-                <li>Barter Collaborations</li>
-                <li>B2B Onboarding</li>
-                <li>LinkedIn Strategy</li>
-                <li>FMCG</li>
-              </ul>
-            </div>
-
-            <h3 className="work-subheading">What I actually do</h3>
             <ul className="work-list">
               <li>
-                <strong>Social &amp; content.</strong> Plan the calendar, make the creatives, publish,
-                engage and report back on what moved.
+                <strong>Content &amp; influencer.</strong> Create brand content and lead influencer
+                partnerships end-to-end.
               </li>
               <li>
-                <strong>Email.</strong> Run campaigns end-to-end — strategy, copy, design, send and
-                performance tracking.
+                <strong>Brand collaborations.</strong> Own co-marketing and creator collaborations
+                from brief to execution.
               </li>
               <li>
-                <strong>Influencer.</strong> Source creators, negotiate deliverables and manage the
-                collaboration through to published content.
+                <strong>Email marketing.</strong> Run retention email end-to-end — planning, design
+                and execution.
               </li>
               <li>
-                <strong>Partnerships.</strong> Build barter and brand collaborations that trade reach
-                and relevance instead of just budget.
+                <strong>Brand socials.</strong> Manage daily social presence across Instagram,
+                LinkedIn, TikTok and Facebook.
               </li>
               <li>
-                <strong>Events.</strong> Take brand activations offline — pop-ups, campus drives and
-                on-ground consumer education.
+                <strong>AI-powered content.</strong> Use AI to speed up creative production and
+                workflow.
               </li>
             </ul>
+
+            <h3 className="work-subheading">Strategy principles</h3>
+            <ul className="principles-list">
+              <li>
+                <strong>Audit before you create.</strong> Fix what&rsquo;s quietly broken before you
+                build what&rsquo;s next.
+              </li>
+              <li>
+                <strong>Segment by behaviour, not by blast.</strong> Same message to everyone wastes
+                the few who&rsquo;d have converted.
+              </li>
+              <li>
+                <strong>Chase the moment, not the feature.</strong> Creative comes from where people
+                actually meet the brand.
+              </li>
+              <li>
+                <strong>Ship it. Measure it. Keep what wins.</strong> Instinct picks the idea. Data
+                picks the winner.
+              </li>
+            </ul>
+            <p className="principles-note">
+              Strategy isn&rsquo;t just a plan — it&rsquo;s a language between brand and audience.
+            </p>
 
             <h3 className="work-subheading">Education</h3>
             <ul className="work-list work-list-plain">
               <li>{profile.education}</li>
-              <li>University of Delhi</li>
+              <li>B.Sc. (Hons) Microbiology — University of Delhi (GPA 3.8/4.0)</li>
             </ul>
           </div>
         </section>
@@ -472,8 +455,8 @@ function HomePage() {
           <div className="section-inner">
             <h2>Contact</h2>
             <p className="contact-intro">
-              Open to marketing roles and brand collaborations. Phone and email are being added soon
-              — for now, the quickest way to reach me is the form or LinkedIn.
+              Open to marketing roles and brand collaborations. Send a message through the form —
+              use WhatsApp or Email below to reach me directly.
             </p>
 
             <form className="contact-form" onSubmit={handleSubmit}>

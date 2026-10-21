@@ -1,12 +1,12 @@
 export const profile = {
   name: "Azra Fayaz",
   pronouns: "She/Her",
-  headline: "University of Delhi | Sales & Marketing | FMCG | Event Management | Content Writing | Social Media Management",
-  location: "India",
+  headline: "Community & Content Strategist | Brand, Social & Influencer Marketing | AI-Assisted Creative",
+  location: "Al Majaz, Sharjah, UAE",
   education: "Indian Institute of Management Rohtak",
   company: "Bambuyu",
-  email: "",
-  phone: ""
+  email: "shahazrafayaz@gmail.com",
+  phone: "+971524328500"
 };
 
 export const skillCategories = [
@@ -52,129 +52,62 @@ export const experience = [
   {
     company: "Bambuyu",
     icon: "bag-handle-outline",
-    role: "Marketing Executive",
-    location: "On-site",
+    role: "Community & Content Executive",
+    location: "UAE",
     date: "Feb 2026 — Present",
-    duration: "9 mos",
+    duration: "",
     type: "Full-time",
     summary:
-      "Running marketing end-to-end — social media, content, email, influencer, partnerships and on-ground activations.",
+      "Owning brand assets, creative production and community growth — from UGC and AI-assisted renders to collaborations, e-commerce and retention.",
     responsibilities: [
-      { title: "Social Media Management", desc: "Managing day-to-day social media presence, content planning, publishing and community engagement." },
-      { title: "Content Creation & Design", desc: "Creating and designing social media content, campaigns, creatives and brand communication." },
-      { title: "Email Marketing", desc: "Managing email marketing end-to-end, from strategy and content creation to design, execution and performance tracking." },
-      { title: "Influencer Marketing", desc: "Identifying and managing creators, coordinating collaborations, negotiating deliverables and overseeing content execution." },
-      { title: "Brand Partnerships", desc: "Building and managing collaborations with relevant brands and partners to drive awareness and engagement." },
-      { title: "Events & Activations", desc: "Planning and managing brand events, pop-ups, activations and on-ground marketing initiatives." },
-      { title: "Content Strategy", desc: "Developing content ideas and campaigns aligned with brand positioning, launches and marketing objectives." }
+      { title: "Brand Assets & Content", desc: "Own the creative asset library — UGC, AI renders, campaigns and marketing assets." },
+      { title: "AI & Creative Production", desc: "Use Claude and Higgsfield to develop and optimise creative renders and assets." },
+      { title: "Creative & Designer Management", desc: "Brief and manage internal and external designers to brand guidelines and deadlines." },
+      { title: "Cross-Functional Execution", desc: "Coordinate with Operations, E-commerce and partners like Noon Minutes and Talabat." },
+      { title: "Collaborations & Co-Marketing", desc: "Own brand collaboration and co-marketing partnerships end-to-end." },
+      { title: "Amazon & E-commerce", desc: "Led the Amazon storefront and A+ Content redesign — briefing to final QA." },
+      { title: "UGC & Influencer Marketing", desc: "Execute paid and barter influencer and UGC collaborations end-to-end." },
+      { title: "Brand Activations", desc: "Managed 15+ activations across UAE, coordinating vendors and on-ground execution." },
+      { title: "Email & CRM", desc: "Own Klaviyo retention marketing end-to-end, delivering 40+ campaigns." }
     ]
   },
   {
     company: "Gramiyaa",
     icon: "leaf-outline",
     role: "Brand Executive",
-    location: "On-site",
+    location: "India",
     date: "Aug 2024 — Jan 2026",
-    duration: "1 yr 6 mos",
+    duration: "",
     type: "Full-time",
     summary:
-      "Drove offline brand growth through events, barter partnerships and a new B2B channel — while growing the brand's LinkedIn presence.",
+      "Drove offline brand growth through exhibitions, barter partnerships and a new B2B channel — while growing the brand's LinkedIn presence.",
     responsibilities: [
-      { title: "On-ground Events", desc: "Executed 4 on-ground events every month, focused on community engagement and consumer education around wood cold-pressed oils." },
-      { title: "Barter Partnerships", desc: "Led strategic offline barter collaborations with 10+ cooking class academies, universities and event partners, expanding visibility among students, food enthusiasts and health-conscious audiences." },
-      { title: "New Sales Channel", desc: "Identified and unlocked a new sales channel by onboarding cooking class academies as B2B customers, enabling consistent product sales and long-term partnerships." },
-      { title: "LinkedIn Growth", desc: "Managed and grew Gramiyaa's LinkedIn presence through content strategy, storytelling and audience-first communication." }
+      { title: "Exhibitions & Events", desc: "Ran national and international exhibitions — 300+ leads at ANUGA Select India 2025." },
+      { title: "B2B Partnerships & Revenue", desc: "Built a new B2B channel by converting cooking academies into bulk-sales partners." },
+      { title: "Barter & Sponsorship", desc: "Eliminated sponsorship costs through barter deals with academies and competitions." },
+      { title: "Social Media & Content Strategy", desc: "Grew LinkedIn and Instagram organically — +74.9% page views, +56.1% visitors." }
     ],
     metrics: [
-      { value: "40%", label: "Follower count increase" },
-      { value: "147%", label: "Impressions growth" },
-      { value: "93.8%", label: "Rise in reactions" }
+      { value: "74.9%", label: "increase in page views" },
+      { value: "56.1%", label: "rise in unique visitors" },
+      { value: "300+", label: "qualified leads at ANUGA 2025" }
     ],
-    metricsNote: "LinkedIn results over a 6-month period."
-  },
-  {
-    company: "Circle Health",
-    icon: "heart-outline",
-    role: "Marketing Associate",
-    location: "Internship",
-    date: "Sep 2024 — Dec 2024",
-    duration: "4 mos",
-    type: "Internship",
-    summary: "Marketing associate internship supporting campaigns and brand communication.",
-    responsibilities: []
+    metricsNote: "Organic LinkedIn & Instagram results."
   },
   {
     company: "Oliveboard",
     icon: "school-outline",
     role: "Marketing Intern",
-    location: "On-site",
-    date: "Jun 2024 — Aug 2024",
-    duration: "3 mos",
+    location: "India",
+    date: "May 2024 — Jul 2024",
+    duration: "",
     type: "Internship",
-    summary: "Marketing internship focused on business marketing, copywriting and marketing support.",
-    responsibilities: []
-  },
-  {
-    company: "SPIC MACAY — Ram Lal Anand College Chapter",
-    icon: "color-palette-outline",
-    role: "President · Art and Craft Head",
-    location: "Delhi, India · On-site",
-    date: "Apr 2022 — Jun 2024",
-    duration: "2 yrs 3 mos",
-    type: "Part-time",
     summary:
-      "Led the college chapter as President, and earlier as Art and Craft Head, organising cultural and artistic programmes.",
+      "Ran email, push and WhatsApp campaigns end-to-end and coordinated webinars from planning to live execution.",
     responsibilities: [
-      { title: "President", desc: "Led the chapter Nov 2023 – Jun 2024 (8 mos), steering events, members and college-level coordination." },
-      { title: "Art and Craft Head", desc: "Handled art and craft initiatives Apr 2022 – Oct 2023 (1 yr 7 mos)." }
+      { title: "Email & Push Campaigns", desc: "Ran audience-segmented email and push campaigns on CleverTap, Mailchimp and Brevo." },
+      { title: "WhatsApp Marketing", desc: "Led WhatsApp campaigns, achieving a 48% open rate and strong conversion." },
+      { title: "Webinar Coordination", desc: "Coordinated webinars end-to-end, from planning to live execution." }
     ]
-  },
-  {
-    company: "Women Welfare Advisory Committee (WWAC)",
-    icon: "people-outline",
-    role: "Student Coordinator",
-    location: "Delhi, India · On-site",
-    date: "Nov 2023 — Jun 2024",
-    duration: "8 mos",
-    type: "Part-time",
-    summary: "Coordinated student-level initiatives and outreach for the committee.",
-    responsibilities: []
-  },
-  {
-    company: "Hirav — The Green Society",
-    icon: "flower-outline",
-    role: "Vice President · Student Ambassador",
-    location: "Delhi, India · On-site",
-    date: "Jan 2023 — Jun 2024",
-    duration: "1 yr 6 mos",
-    type: "Part-time",
-    summary:
-      "Served as Vice President and, before that, as Student Ambassador for the environmental society.",
-    responsibilities: [
-      { title: "Vice President", desc: "Led initiatives and members Nov 2023 – Jun 2024 (8 mos)." },
-      { title: "Student Ambassador", desc: "Represented the society Jan 2023 – Oct 2023 (10 mos)." }
-    ]
-  },
-  {
-    company: "National Service Scheme",
-    icon: "hand-left-outline",
-    role: "Volunteer",
-    location: "Delhi, India · On-site",
-    date: "Nov 2021 — Nov 2023",
-    duration: "2 yrs 1 mo",
-    type: "Part-time",
-    summary: "Volunteered across community service drives and campus outreach programmes.",
-    responsibilities: []
-  },
-  {
-    company: "AWAAZ — The English Debating Society",
-    icon: "mic-outline",
-    role: "Content Writer",
-    location: "Delhi, India · On-site",
-    date: "May 2022 — Jul 2023",
-    duration: "1 yr 3 mos",
-    type: "Part-time",
-    summary: "Wrote and edited content for the debating society's events, posts and publications.",
-    responsibilities: []
   }
 ];
