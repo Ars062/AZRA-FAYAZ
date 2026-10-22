@@ -472,45 +472,47 @@ function HomePage() {
 
             <h3 className="work-subheading">Selected work</h3>
 
-            <article className="showcase showcase--grid">
-              <Showcase3D>
-                <div className="showcase-card">
-                  <img
-                    className="showcase-img"
-                    src={contentGrid}
-                    alt="Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post"
-                    loading="lazy"
-                  />
-                  <div className="showcase-overlay">
-                    <h4 className="showcase-title">Content Calendar</h4>
-                    <p className="showcase-desc">
-                      A weekly grid planned around what the audience actually responds to - product,
-                      education and community moments planned together, not one at a time.
-                    </p>
+            <div className="showcase-grid">
+              <article className="showcase showcase--grid">
+                <Showcase3D>
+                  <div className="showcase-card">
+                    <img
+                      className="showcase-img"
+                      src={contentGrid}
+                      alt="Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post"
+                      loading="lazy"
+                    />
+                    <div className="showcase-overlay">
+                      <h4 className="showcase-title">Content Calendar</h4>
+                      <p className="showcase-desc">
+                        A weekly grid planned around what the audience actually responds to - product,
+                        education and community moments planned together, not one at a time.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Showcase3D>
-            </article>
+                </Showcase3D>
+              </article>
 
-            <article className="showcase showcase--email">
-              <Showcase3D>
-                <div className="showcase-card">
-                  <img
-                    className="showcase-img"
-                    src={emailCampaigns}
-                    alt="Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page"
-                    loading="lazy"
-                  />
-                  <div className="showcase-overlay">
-                    <h4 className="showcase-title">Email Marketing</h4>
-                    <p className="showcase-desc">
-                      Launch, seasonal and retention emails written end to end - offer, design and send,
-                      so the message lands the same way it was planned.
-                    </p>
+              <article className="showcase showcase--email">
+                <Showcase3D>
+                  <div className="showcase-card">
+                    <img
+                      className="showcase-img"
+                      src={emailCampaigns}
+                      alt="Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page"
+                      loading="lazy"
+                    />
+                    <div className="showcase-overlay">
+                      <h4 className="showcase-title">Email Marketing</h4>
+                      <p className="showcase-desc">
+                        Launch, seasonal and retention emails written end to end - offer, design and
+                        send, so the message lands the same way it was planned.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Showcase3D>
-            </article>
+                </Showcase3D>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -523,11 +525,16 @@ function HomePage() {
             </p>
 
             <form className="contact-form" onSubmit={handleSubmit}>
-              <label htmlFor="name">Name</label>
-              <input id="name" name="name" type="text" required />
-
-              <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" required />
+              <div className="form-row">
+                <div className="form-field">
+                  <label htmlFor="name">Name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+              </div>
 
               <label htmlFor="phone">Phone</label>
               <div className="phone-field">
