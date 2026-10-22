@@ -3,6 +3,7 @@ import Typewriter from "../components/Typewriter";
 import SkillCloud from "../components/SkillCloud";
 import Globe3D from "../components/Globe3D";
 import Showcase3D from "../components/Showcase3D";
+import Lightbox from "../components/Lightbox";
 import { profile, experience, skillCategories, skills } from "../data/profile";
 import azraPhoto from "../../azra profile.png";
 import azraJps from "../../azra-jps.jpeg";
@@ -122,6 +123,13 @@ const CONTACT_EMAIL = profile.email || "";
 function HomePage() {
   const [sent, setSent] = useState(null);
   const [countryCode, setCountryCode] = useState("+91");
+  const [openJobs, setOpenJobs] = useState([]);
+  const [lightbox, setLightbox] = useState(null);
+
+  const toggleJob = (company) =>
+    setOpenJobs((prev) =>
+      prev.includes(company) ? prev.filter((c) => c !== company) : [...prev, company]
+    );
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -371,14 +379,36 @@ function HomePage() {
                     <p className="tl-summary">{job.summary}</p>
 
                     {job.responsibilities.length > 0 && (
-                      <ul className="tl-points">
-                        {job.responsibilities.map((r) => (
-                          <li key={r.title}>
-                            <strong>{r.title}</strong>
-                            <span>{r.desc}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <>
+                        <button
+                          type="button"
+                          className={`tl-toggle ${openJobs.includes(job.company) ? "is-open" : ""}`}
+                          onClick={() => toggleJob(job.company)}
+                          aria-expanded={openJobs.includes(job.company)}
+                        >
+                          <ion-icon
+                            name={openJobs.includes(job.company) ? "chevron-up" : "chevron-down"}
+                          ></ion-icon>
+                          {openJobs.includes(job.company)
+                            ? "Hide achievements"
+                            : `Show ${job.responsibilities.length} achievements`}
+                        </button>
+
+                        <div
+                          className={`tl-points-wrap ${
+                            openJobs.includes(job.company) ? "is-open" : ""
+                          }`}
+                        >
+                          <ul className="tl-points">
+                            {job.responsibilities.map((r) => (
+                              <li key={r.title}>
+                                <strong>{r.title}</strong>
+                                <span>{r.desc}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </>
                     )}
 
                     {job.metrics && (
@@ -476,12 +506,26 @@ function HomePage() {
               <article className="showcase showcase--grid">
                 <Showcase3D>
                   <div className="showcase-card">
-                    <img
-                      className="showcase-img"
-                      src={contentGrid}
-                      alt="Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post"
-                      loading="lazy"
-                    />
+                    <button
+                      type="button"
+                      className="showcase-media"
+                      onClick={() =>
+                        setLightbox({
+                          src: contentGrid,
+                          title: "Content Calendar",
+                          desc: "A weekly grid planned around what the audience actually responds to - product, education and community moments planned together, not one at a time.",
+                          alt: "Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post",
+                        })
+                      }
+                      aria-label="Open Content Calendar slide full size"
+                    >
+                      <img
+                        className="showcase-img"
+                        src={contentGrid}
+                        alt="Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post"
+                        loading="lazy"
+                      />
+                    </button>
                     <div className="showcase-overlay">
                       <h4 className="showcase-title">Content Calendar</h4>
                       <p className="showcase-desc">
@@ -489,6 +533,9 @@ function HomePage() {
                         education and community moments planned together, not one at a time.
                       </p>
                     </div>
+                    <span className="showcase-expand" aria-hidden="true">
+                      <ion-icon name="expand-outline"></ion-icon>
+                    </span>
                   </div>
                 </Showcase3D>
               </article>
@@ -496,12 +543,26 @@ function HomePage() {
               <article className="showcase showcase--email">
                 <Showcase3D>
                   <div className="showcase-card">
-                    <img
-                      className="showcase-img"
-                      src={emailCampaigns}
-                      alt="Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page"
-                      loading="lazy"
-                    />
+                    <button
+                      type="button"
+                      className="showcase-media"
+                      onClick={() =>
+                        setLightbox({
+                          src: emailCampaigns,
+                          title: "Email Marketing",
+                          desc: "Launch, seasonal and retention emails written end to end - offer, design and send, so the message lands the same way it was planned.",
+                          alt: "Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page",
+                        })
+                      }
+                      aria-label="Open Email Marketing slide full size"
+                    >
+                      <img
+                        className="showcase-img"
+                        src={emailCampaigns}
+                        alt="Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page"
+                        loading="lazy"
+                      />
+                    </button>
                     <div className="showcase-overlay">
                       <h4 className="showcase-title">Email Marketing</h4>
                       <p className="showcase-desc">
@@ -509,6 +570,9 @@ function HomePage() {
                         send, so the message lands the same way it was planned.
                       </p>
                     </div>
+                    <span className="showcase-expand" aria-hidden="true">
+                      <ion-icon name="expand-outline"></ion-icon>
+                    </span>
                   </div>
                 </Showcase3D>
               </article>
@@ -592,6 +656,7 @@ function HomePage() {
           </div>
         </section>
       </main>
+      <Lightbox item={lightbox} onClose={() => setLightbox(null)} />
     </div>
   );
 }

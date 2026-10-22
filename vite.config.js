@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Arza-demo/"
+  base: process.env.BASE_PATH || "/AZRA-FAYAZ/"
 });

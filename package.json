@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/Ars062/AZRA-FAYAZ.git -b gh-pages",
+    "deploy:old": "gh-pages -d dist -r https://github.com/Ars062/Arza-demo.git -b gh-pages"
   },
   "dependencies": {
     "motion": "^14.1.0",
