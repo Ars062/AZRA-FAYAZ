@@ -354,7 +354,34 @@ h2::after {
 .about-photo-content {
   position: relative;
   z-index: 1;
-  max-width: 60%;
+  max-width: 72%;
+}
+
+.about-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 1.1rem 1.6rem;
+  align-items: start;
+}
+
+.about-side {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.about-side .approach-card {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .about-photo-content {
+    max-width: 100%;
+  }
+
+  .about-cols {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about-photo-content .approach-card,
@@ -920,6 +947,86 @@ h2::after {
 
 .work-list strong {
   color: var(--ink);
+}
+
+.showcase {
+  margin: 0 0 1.6rem;
+  padding: 1.3rem 1.2rem 1.4rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.showcase--grid {
+  background: linear-gradient(135deg, #3f0a23 0%, #8d1c50 45%, #d94b86 100%);
+}
+
+.showcase--email {
+  background: linear-gradient(135deg, #221243 0%, #6b2f86 48%, #ffb35c 100%);
+}
+
+.showcase-stage {
+  perspective: 1400px;
+}
+
+.showcase-card {
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.showcase-img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 28px rgba(20, 6, 16, 0.38));
+}
+
+.showcase-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0.6rem 1.4rem 1.4rem;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 8, 22, 0.55) 0%,
+    rgba(28, 8, 22, 0.32) 34%,
+    rgba(28, 8, 22, 0) 62%
+  );
+}
+
+.showcase-title {
+  position: relative;
+  margin: 0;
+  font-family: "Syne", "Fraunces", Georgia, serif;
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: #fff6fa;
+  text-shadow: 0 2px 14px rgba(20, 6, 16, 0.55);
+}
+
+.showcase-desc {
+  position: relative;
+  margin: 0.5rem auto 0;
+  max-width: 44ch;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.42;
+  color: rgba(255, 244, 249, 0.9);
+  text-shadow: 0 1px 10px rgba(20, 6, 16, 0.5);
 }
 
 .work-list-plain li {

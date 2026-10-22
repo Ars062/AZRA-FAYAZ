@@ -2,9 +2,12 @@ import { useState } from "react";
 import Typewriter from "../components/Typewriter";
 import SkillCloud from "../components/SkillCloud";
 import Globe3D from "../components/Globe3D";
+import Showcase3D from "../components/Showcase3D";
 import { profile, experience, skillCategories, skills } from "../data/profile";
 import azraPhoto from "../../azra profile.png";
 import azraJps from "../../azra-jps.jpeg";
+import contentGrid from "../assets/content-grid.webp";
+import emailCampaigns from "../assets/email-campaigns.webp";
 
 function scrollTo(id) {
   const el = document.getElementById(id);
@@ -294,29 +297,33 @@ function HomePage() {
             <div className="about-photo-scrim" aria-hidden="true" />
             <div className="about-photo-content">
               <h2>Who I am</h2>
-              <div className="prose">
-                <p className="lead">
-                  A Community &amp; Content Strategist who turns performance data and human behaviour
-                  into content and community moments that make a brand feel like someone, not something.
-                </p>
-                <p>
-                  Across social, email, influencer and on-ground work, I plan it, make it, ship it,
-                  then read the numbers to keep what wins.
-                </p>
-              </div>
+              <div className="about-cols">
+                <div className="prose">
+                  <p className="lead">
+                    A Community &amp; Content Strategist who turns performance data and human behaviour
+                    into content and community moments that make a brand feel like someone, not something.
+                  </p>
+                  <p>
+                    Across social, email, influencer and on-ground work, I plan it, make it, ship it,
+                    then read the numbers to keep what wins.
+                  </p>
+                </div>
 
-              <div className="approach-card">
-                <span className="approach-tag">My approach is simple</span>
-                <p>
-                  Understand the audience, create with intent, and deliver content that moves people —
-                  emotionally and analytically.
-                </p>
-              </div>
+                <div className="about-side">
+                  <div className="approach-card">
+                    <span className="approach-tag">My approach is simple</span>
+                    <p>
+                      Understand the audience, create with intent, and deliver content that moves people -
+                      emotionally and analytically.
+                    </p>
+                  </div>
 
-              <blockquote className="quote-card">
-                <p>&ldquo;Her strategies helped us shift from posting randomly to posting with purpose.&rdquo;</p>
-                <cite>Bashar Karoubi — Founder, Bambuyu</cite>
-              </blockquote>
+                  <blockquote className="quote-card">
+                    <p>&ldquo;Her strategies helped us shift from posting randomly to posting with purpose.&rdquo;</p>
+                    <cite>Bashar Karoubi - Founder, Bambuyu</cite>
+                  </blockquote>
+                </div>
+              </div>
 
               <ul className="fact-row">
                 <li>
@@ -460,8 +467,50 @@ function HomePage() {
             <h3 className="work-subheading">Education</h3>
             <ul className="work-list work-list-plain">
               <li>{profile.education}</li>
-              <li>B.Sc. (Hons) Microbiology — University of Delhi (GPA 3.8/4.0)</li>
+              <li>B.Sc. (Hons) Microbiology - University of Delhi (GPA 3.8/4.0)</li>
             </ul>
+
+            <h3 className="work-subheading">Selected work</h3>
+
+            <article className="showcase showcase--grid">
+              <Showcase3D>
+                <div className="showcase-card">
+                  <img
+                    className="showcase-img"
+                    src={contentGrid}
+                    alt="Weekly social content grid for Bambuyu across Instagram, LinkedIn and TikTok, with reach and engagement figures on each post"
+                    loading="lazy"
+                  />
+                  <div className="showcase-overlay">
+                    <h4 className="showcase-title">Content Calendar</h4>
+                    <p className="showcase-desc">
+                      A weekly grid planned around what the audience actually responds to - product,
+                      education and community moments planned together, not one at a time.
+                    </p>
+                  </div>
+                </div>
+              </Showcase3D>
+            </article>
+
+            <article className="showcase showcase--email">
+              <Showcase3D>
+                <div className="showcase-card">
+                  <img
+                    className="showcase-img"
+                    src={emailCampaigns}
+                    alt="Bambuyu email campaigns including a back-to-school sale, a product launch and a giveaway landing page"
+                    loading="lazy"
+                  />
+                  <div className="showcase-overlay">
+                    <h4 className="showcase-title">Email Marketing</h4>
+                    <p className="showcase-desc">
+                      Launch, seasonal and retention emails written end to end - offer, design and send,
+                      so the message lands the same way it was planned.
+                    </p>
+                  </div>
+                </div>
+              </Showcase3D>
+            </article>
           </div>
         </section>
 
